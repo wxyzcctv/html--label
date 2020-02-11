@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见的HTML标签</title>
+    <style>
+        table{
+            /* border-collapse: collapse; */
+            /* 设置border-collapse的属性将表格网格线进行合并 */
+        }
+    </style>
+</head>
+<body>
+    <strong>
+        a标签：
+    </strong>发送的是get请求
+    <br>
+    <a href="index2.html">link</a>
+    <br>
+    <strong>
+        form表单
+    </strong>跳转内容在action中，而且需要通过设置input为submit才能进行提交
+    <form action="users" method="GET">
+        <label>用户名：<input type="text" name="username"></label>
+        <label>密码：<input type="password" name="password"></label>
+        <br>
+        喜欢的水果(此处在提交时，当选中橘子的时将fruit=orange提交到后台)
+        <br>
+        <label><input type="checkbox" name="fruit" value="orange">橘子</label>
+        <label><input type="checkbox" name="fruit" value="banana">香蕉</label>
+        <br>
+        爱我(由于radio中name属性设置为相同的值，所以只能选中一个)
+        <br>
+        <label><input type="radio" name="loveme" id="">Yes</label>
+        <label><input type="radio" name="loveme" id="">No</label>
+        <br>
+        <strong>select标签：</strong>
+        <br>
+        select标签中的选项是option，设置默认选中就在option设置selected，不让选的时候设置disabled。select设置multiple就能进行多选。
+        <br>
+        <select name="group" multiple>
+            <option value="">-</option>
+            <option value="1">第一组</option>
+            <option value="2">第二组</option>
+            <option value="3" disabled>第三组</option>
+            <option value="4" selected>第四组</option>
+        </select>
+        <br>
+        <strong>textarea标签:</strong>
+        <br>
+        设置style中的resize：none就能禁止用户改变大小
+        <br>
+        <textarea style="resize: none;" name="爱好" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="button">
+    </form>
+    <br>
+    <strong>table标签:</strong>
+    <br>
+    总体结构有三个：thead、tbody、tfoot，三者的顺序是从头到脚，tr表示一行，th表示标题，td表示数据,colgroup表示设置列的宽度，table中的border属性能设置表格的网格线。
+    <br>
+    <table border=1>
+        <colgroup>
+            <col width=100>
+            <col bgcolor=red width=200>
+            <col width=100>
+            <col width=70>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>项目</th><th>姓名</th><th>班级</th><th>成绩</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td><td>小明</td><td>1</td><td>94</td>
+            </tr>
+            <tr>
+                <td></td><td>小红</td><td>1</td><td>96</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>平均分</th><td></td><td></td><td>95</td>
+            </tr>
+            <tr>
+                <th>总分</th><td></td><td></td><td>190</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
